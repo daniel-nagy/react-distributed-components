@@ -1,10 +1,13 @@
 {
   "name": "react-distributed-components",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Effortlessly compose client and server components.",
   "author": "Daniel Nagy <1622446+daniel-nagy@users.noreply.github.com>",
-  "repository": "github:daniel-nagy/react-distributed-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-nagy/react-distributed-components.git"
+  },
   "files": [
     "build",
     "!.tsinfo"
@@ -27,6 +30,8 @@
     "clean": "rm -rf build",
     "eslint": "eslint src",
     "eslint:fix": "eslint src --fix",
+    "prebuild": "yarn clean",
+    "prepack": "yarn build",
     "prettier": "prettier --check --ignore-path .gitignore .",
     "prettier:fix": "prettier --write --ignore-path .gitignore ."
   },
